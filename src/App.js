@@ -5,21 +5,25 @@ import Menu from "./components/Menu";
 import Home from './components/Home';
 import About from './components/About';
 import NotFound from './components/NotFound'
-import CourseList from "./components/CourseList";
+import ProductList from "./components/ProductList";
 import routes from './routes'; 
+import './App.css'
 class App extends Component {
   render() {
     return (
       <Router>
-      <div className="container pt-5">
+
+      <div className="container pt-5">  
+      <div className="row">
+        <Menu />
+     </div>
           <div className="row">
          <Title />
          </div>
+        
         <div className="row">
-        <Menu />
-        <div className="col-8">
+        <div className="col-12">
           <div className="card bg-navy">
-          <h5 className="card-title">Content</h5>
             <div className="card-body">
               <Switch>
               {this.showRoutes(routes)}

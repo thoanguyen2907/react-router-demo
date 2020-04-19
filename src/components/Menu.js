@@ -3,19 +3,19 @@ import { NavLink } from "react-router-dom";
 const menus = [
   { to: "/", exact: true, name: "Home" },
   { to: "/about", exact: false, name: "About" },
-  { to: "/course", exact: false, name: "Course" },
+  { to: "/product", exact: false, name: "Products" },
 ];
 
 export default class Menu extends Component {
   render() {
     return (
-      <div className="col-4">
-        <div className="card">
-          <ul className="list-group list-group-flush">
+  
+      <nav className="navbar navbar-light bg-light">
+          <ul className="list-group">
             {this.showMenu(menus)}
           </ul>
-        </div>
-      </div>
+        </nav>
+  
     );
   }
   showMenu(menus) {
